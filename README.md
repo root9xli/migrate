@@ -28,7 +28,7 @@ A fork of [golang-migrate/migrate](https://github.com/golang-migrate/migrate) â€
 ## Supported Migration Sources
 
 | Source     | Package |
-|------------|---------|
+|------------|----------|
 | Filesystem | `source/file` |
 | Go embed   | `source/iofs` |
 | AWS S3     | `source/aws_s3` |
@@ -110,45 +110,12 @@ Migration files follow the naming convention:
 ```
 
 Example:
+
 ```
-migrations/
-  000001_create_users_table.up.sql
-  000001_create_users_table.down.sql
-  000002_add_email_index.up.sql
-  000002_add_email_index.down.sql
-```
-
-## Development
-
-```bash
-# Clone the repository
-git clone https://github.com/your-org/migrate.git
-cd migrate
-
-# Run tests
-go test ./...
-
-# Run linter
-golangci-lint run
-
-# Build CLI
-go build -o migrate ./cmd/migrate
+000001_create_users_table.up.sql
+000001_create_users_table.down.sql
+000002_add_email_index.up.sql
+000002_add_email_index.down.sql
 ```
 
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feat/my-feature`)
-3. Commit your changes (`git commit -m 'feat: add my feature'`)
-4. Push to the branch (`git push origin feat/my-feature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License â€” see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgements
-
-This project is a fork of [golang-migrate/migrate](https://github.com/golang-migrate/migrate). All credit for the original implementation goes to the original authors and contributors.
+> **Note:** I prefer zero-padded 6-digit version numbers (e.g. `000001`) to keep files sorted correctly in the filesystem and avoid ordering issues when the number of migrations grows beyond 9.
