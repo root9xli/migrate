@@ -112,10 +112,10 @@ Migration files follow the naming convention:
 Example:
 
 ```
-1_create_users_table.up.sql
-1_create_users_table.down.sql
-2_add_email_index.up.sql
-2_add_email_index.down.sql
+000001_create_users_table.up.sql
+000001_create_users_table.down.sql
+000002_add_email_index.up.sql
+000002_add_email_index.down.sql
 ```
 
-> **Note:** I keep my migration files in `db/migrations/` rather than `migrations/` to co-locate them with other database-related files (schemas, seeds, etc.).
+> **Note (personal):** I prefer zero-padded 6-digit version numbers (e.g. `000001`) over plain integers — it keeps the files sorted correctly in all file explorers and avoids ordering surprises when you exceed 9 migrations.
