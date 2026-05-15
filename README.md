@@ -118,4 +118,4 @@ Example:
 000002_add_email_index.down.sql
 ```
 
-> **Note:** I prefer zero-padded 6-digit version numbers (e.g. `000001`) to keep files sorted correctly in most file explorers and `ls` output.
+> **Note:** I prefer zero-padded 6-digit version numbers (e.g. `000001`) to keep files sorted correctly in most file explorers and editors.
