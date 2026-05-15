@@ -112,10 +112,10 @@ Migration files follow the naming convention:
 Example:
 
 ```
-000001_create_users_table.up.sql
-000001_create_users_table.down.sql
-000002_add_email_index.up.sql
-000002_add_email_index.down.sql
+001_create_users.up.sql
+001_create_users.down.sql
+002_add_email_index.up.sql
+002_add_email_index.down.sql
 ```
 
-> **Note:** I prefer zero-padded 6-digit version numbers (e.g. `000001`) to keep files sorted correctly in most file explorers and editors.
+> **Note:** I prefer zero-padded version numbers (e.g. `001`, `002`) for consistent alphabetical ordering in the filesystem.
